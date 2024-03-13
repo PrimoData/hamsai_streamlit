@@ -1,6 +1,7 @@
 import streamlit as st
 import replicate
 import time
+import os
 
 # Configure Streamlit Page
 page_icon = "https://pbs.twimg.com/profile_images/1764746187754606593/lwhMyQ2P_400x400.jpg"
@@ -32,7 +33,7 @@ def generate_image_hamsai(prompt):
     prompt = prompt.replace("$HAMSAI", "TOK").replace("$HAMSAI", "TOK")
     print(f"submitted {prompt}")
     output = replicate.run(
-        "primodata/hamsai:0cbdcb85378ed45e55e7a40dd892a029ff0818477f8d105155c322eb8bfe2031",
+        "primodata/hamsai:9c4193f928f28f60f92cd1c0321b60236d694c2837d4fb5b56b687c70c67b762",
         input={"prompt": prompt},
     )
     return output[0]
@@ -51,7 +52,7 @@ generate_image = st.button("Generate Image")
 
 if generate_image:
     # check if prompt contains '$HAMSAI'
-    if "$HAMSAI" not in prompt.lower():
+    if "$hamsai" not in prompt.lower():
         st.error("'$HAMSAI' needs to be in your prompt.")
     else:
         with st.spinner(text="Generating. This could take a minute..."):
@@ -71,5 +72,5 @@ if city:
     with st.spinner(text="Generating. This could take a minute..."):
         time.sleep(5)
     st.image(
-        "https://pbxt.replicate.delivery/pb4BOopSt7LeaK9ApTBkpcV2cipCW22LEhGMsTTCPqqaREuIA/out-0.png"
+        "https://replicate.delivery/pbxt/brfa9nhCnaUZKKPllfjMbc5DxzmJImeJTY5apiPWJC4i2XfJB/out-0.png"
     )
