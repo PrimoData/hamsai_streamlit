@@ -45,7 +45,6 @@ prompt = st.text_input(
 )
 with st.expander("Examples:"):
     city = st.button("$HAMSAI in a city.")
-    mountain = st.button("$HAMSAI on a mountain.")
 
 generate_image = st.button("Generate Image")
 
@@ -61,13 +60,6 @@ if generate_image:
 
 
 # Examples
-if mountain:
-    with st.spinner(text="Generating. This could take a minute..."):
-        time.sleep(5)
-    st.image(
-        "https://pbxt.replicate.delivery/2RephnDLCixkWKyFs5PtgAvw6PL15KfQSuZ2IBBleKfxRhwFB/out-0.png"
-    )
-
 if city:
     with st.spinner(text="Generating. This could take a minute..."):
         time.sleep(5)
