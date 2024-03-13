@@ -1,6 +1,6 @@
 # $HAMSAI Image Generator
 
-Created an [AI image generator]() for a crypto project, [$HAMSAI](https://hamsters.ai/).
+Created an [AI image generator](https://hamsai.streamlit.app/) for a crypto project, [$HAMSAI](https://hamsters.ai/).
 
 ## Background
 $HAMSAI is a crypto project on Solana, part gaming / part memecoin. Check out their [Website](https://hamsters.ai/), [X/Twitter](https://twitter.com/AiHamsters), and [Dexscreener](https://dexscreener.com/solana/9jxhkbag2rabw96cs1df9yhjupfjdhqvdvuhcszvrgg3).
